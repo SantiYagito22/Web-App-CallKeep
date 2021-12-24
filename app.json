@@ -1,12 +1,17 @@
 {
   "expo": {
-    "name": "Web-App",
-    "slug": "Web-App",
+    "name": "webrtc-testing",
+    "slug": "webrtc-testing",
     "version": "1.0.0",
-    "plugins": ["@config-plugins/react-native-callkeep", "@config-plugins/react-native-webrtc"],
+    "plugins": [
+      "@config-plugins/react-native-callkeep",
+      "@config-plugins/react-native-webrtc"
+    ],
     "assetBundlePatterns": [
       "**/*"
-    ]
-  },
-  "name": "Web-App"
+    ],
+    "android": {
+      "package": "com.caaring.webrtctesting"
+    }
+  }
 }

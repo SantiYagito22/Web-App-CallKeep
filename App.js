@@ -1,12 +1,8 @@
+import 'expo-dev-client';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, PermissionsAndroid } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import RNCallKeep from 'react-native-callkeep';
-import uuid from 'uuid';
-import BackgroundTimer from 'react-native-background-timer';
-
-//Hacer que la app emita eventos periodicamente, incluso en segundo plano (para recibir llamadas sin estar conectada a la app); 
-//BackgroundTimer.start();
 
 const styles = StyleSheet.create({
   container: {
@@ -37,29 +33,6 @@ const styles = StyleSheet.create({
 });
 
 
-RNCallKeep.setup(
-  {
-   ios: {
-     appName: 'My app name',
-   },
-   android: {
-     alertTitle: 'Permissions required',
-     alertDescription: 'This application needs to access your phone accounts',
-     cancelButton: 'Cancel',
-     okButton: 'ok',
-     imageName: 'phone_account_icon',
-     additionalPermissions: [PermissionsAndroid.PERMISSIONS.example],
-     foregroundService: {
-       channelId: 'com.company.my',
-       channelName: 'Foreground service for my app',
-       notificationTitle: 'My app is running on background',
-       notificationIcon: 'Path to the resource icon of the notification',
-     }, 
-   }
- });
-
-
-
 const options = {
   ios: {
     appName: 'My app name',
@@ -80,7 +53,7 @@ const options = {
   }
 };
 
-console.log(RNCallKeep.setup(options));
+RNCallKeep.setup(options)
 
 export default function App() {
   return (
