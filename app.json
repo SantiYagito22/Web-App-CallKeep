@@ -3,6 +3,7 @@
     "name": "Web-App",
     "slug": "Web-App",
     "version": "1.0.0",
+    "plugins": ["@config-plugins/react-native-callkeep", "@config-plugins/react-native-webrtc"],
     "assetBundlePatterns": [
       "**/*"
     ]
